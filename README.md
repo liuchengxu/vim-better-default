@@ -2,6 +2,8 @@
 
 There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
 
+In the beginning, I wrote this for simplifying my `.vimrc` file. You can see [space-vim](https://github.com/liuchengxu/space-vim) for more information about the principle of my vim configurations. If you're new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found. 
+
 ## Installation
 
 This plugin can be installed with a varity of plugin managers, such as:
