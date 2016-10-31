@@ -53,8 +53,6 @@ endif
 
 set background=dark        " Assume dark background
 set cursorline             " Highlight current line
-set spell                  " Spell checking on
-
 
 set ffs=unix,dos,mac       " Use Unix as the standard file type
 
