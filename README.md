@@ -25,7 +25,13 @@ This plugin can be installed with a varity of plugin managers, such as:
     - `vim_better_default_buffer_key_mapping`
     - `vim_better_default_fold_key_mapping`
 
-For example, if you want to exclude key mappings in [vim-beter-default](https://github.com/liuchengxu/vim-better-default), just set the value as 0.
+If you set the `vim_better_default_minumum` option, then vim seemingly looks like no difference with the default vim, it only adds some essential funtionalities.
+
+```
+let g:vim_better_default_minimum = 1
+```
+
+If you want to exclude key mappings in [vim-beter-default](https://github.com/liuchengxu/vim-better-default), just set the value as 0.
 
 ```
 let g:vim_better_default_key_mapping = 0
@@ -34,6 +40,3 @@ let g:vim_better_default_key_mapping = 0
 For more details, please see the [default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim). Don't worry. It is extremely simple and just part of your own `.vimrc` file alike.
 
 You can also fork [vim-beter-default](https://github.com/liuchengxu/vim-better-default) and modify `plugin/default.vim` for more customization.
-
-### License
-MIT

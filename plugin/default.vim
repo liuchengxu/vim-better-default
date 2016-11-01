@@ -41,11 +41,33 @@ set showmode                   " Display current mode
 set linespace=0                " No extra spaces between rows
 set backspace=indent,eol,start " Backspace for dummies
 
+set showmatch      " Show matching brackets/parentthesis
+set matchtime=5    " Show matching time
+set laststatus=2   " Always show status line
+
 set winminheight=0
 set wildmode=list:longest,full
 set wildmenu
 
+set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+
+set wildignore+=*swp,*.pyc,*.png,*.jpg,*.gif,*.zip
+set wildignore+=*/tmp/*,*.so     " Unix
+set wildignore+=*\\tmp\\*,*.exe  " Windows
+
 set history=10000
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+ 
+" Treat long lines ad break lines (useful when moving around in them)
+map j gj
+map k gk
 
 if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
   finish
@@ -56,21 +78,11 @@ set cursorline             " Highlight current line
 
 set ffs=unix,dos,mac       " Use Unix as the standard file type
 
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-
-set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
-
 highlight clear SignColumn
 highlight clear LineNr
 
 set number         " Line numbers on
 set relativenumber " Relative numbers on
-set showmatch      " Show matching brackets/parentthesis
-set matchtime=5    " Show matching time
-set laststatus=2   " Always show status line
 set linebreak
 set foldenable
 set foldmarker={,}
@@ -78,15 +90,12 @@ set foldlevel=0
 set foldmethod=marker
 set foldcolumn=3
 
-set wildignore+=*swp,*.pyc,*.png,*.jpg,*.gif,*.zip
-set wildignore+=*/tmp/*,*.so     " Unix
-set wildignore+=*\\tmp\\*,*.exe  " Windows
+set viminfo+=!
 
 if has('clipboard')
     set clipboard=unnamed
 endif
 
-set viminfo+=!
 if has('persistent_undo')
   set undofile             " Persistent undo
   set undolevels=1000      " Maximum number of changes that can be undone
@@ -138,14 +147,8 @@ endif
         nnoremap L $
         " Yank to the end of line
         nnoremap Y y$
-        " Visual shifting (does not exit Visual mode)
-        vnoremap < <gv
-        vnoremap > >gv
-        " Auto indent pasted text
+       " Auto indent pasted text
         nnoremap p p=`]<C-o>
-        " Treat long lines ad break lines (useful when moving around in them)
-        map j gj
-        map k gk
 
         nmap <Leader>sc :nohlsearch<CR>
       endif
