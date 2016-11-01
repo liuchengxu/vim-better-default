@@ -2,7 +2,7 @@
 
 There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
 
-In the beginning, I wrote this for simplifying my `.vimrc` file. You can see [space-vim](https://github.com/liuchengxu/space-vim) for more information about the principle of my vim configurations. If you're new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found. 
+In the beginning, I wrote this for simplifying my `.vimrc` file. You can see [space-vim](https://github.com/liuchengxu/space-vim) for more information about the principle of my vim configurations. If you're new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found.
 
 ## [中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html)
 
@@ -21,9 +21,12 @@ This plugin can be installed with a varity of plugin managers, such as:
 
 - `vim_better_default_key_mapping`
     - `vim_better_default_basic_key_mapping`
-    - `vim_better_default_window_key_mapping`
     - `vim_better_default_buffer_key_mapping`
+    - `vim_better_default_file_key_mapping`
     - `vim_better_default_fold_key_mapping`
+    - `vim_better_default_window_key_mapping`
+
+
 
 If you set the `vim_better_default_minumum` option, then vim seemingly looks like no difference with the default vim, it only adds some essential funtionalities.
 
@@ -40,3 +43,5 @@ let g:vim_better_default_key_mapping = 0
 For more details, please see the [default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim). Don't worry. It is extremely simple and just part of your own `.vimrc` file alike.
 
 You can also fork [vim-beter-default](https://github.com/liuchengxu/vim-better-default) and modify `plugin/default.vim` for more customization.
+
+If you have any ideas or suggestions to improve [vim-better-default](https://github.com/liuchengxu/vim-better-default), please [let me know](https://github.com/liuchengxu/vim-better-default/issues). Your feedback is highly appreciated.
