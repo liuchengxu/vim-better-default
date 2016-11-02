@@ -93,6 +93,14 @@ if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
   finish
 endif
 
+if exists('g:vim_better_default_backup_on') && g:vim_better_default_backup_on
+  set backup
+else
+  set nobackup
+  set noswapfile
+  set nowritebackup
+endif
+
 set background=dark        " Assume dark background
 set cursorline             " Highlight current line
 set ffs=unix,dos,mac       " Use Unix as the standard file type
