@@ -14,46 +14,61 @@ let g:loaded_vim_better_default = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+" Neovim has set these as default
+if !has('nvim')
+
+  set nocompatible
+
+  syntax on                      " Syntax highlighting
+  filetype plugin indent on      " Automatically detect file types
+  set autoindent                 " Indent at the same level of the previous line
+  set autoread                   " Automatically read a file changed outside of vim
+  set backspace=indent,eol,start " Backspace for dummies
+  set display=lastline           " Show as much as possible of the last line
+  set encoding=utf-8             " Set default encoding
+  set history=10000              " Maximum history record
+  set hlsearch                   " Highlight search terms
+  set incsearch                  " Find as you type search
+  set laststatus=2               " Always show status line
+  set mouse=a                    " Automatically enable mouse usage
+  set smarttab                   " Smart tab
+  set ttyfast                    " Faster redrawing
+  set viminfo+=!                 " Viminfo include ! 
+  set wildmenu                   " Show list instead of just completing
+
+  set ttymouse=xterm2
+
+endif
+
 set shortmess=atI  " No help Uganda information
-set incsearch      " Find as you type search
-set hlsearch       " Highlight search terms
 set ignorecase     " Case sensitive search
 set smartcase      " Case sensitive when uc present
 set scrolljump=5   " Line to scroll when cursor leaves screen
 set scrolloff=3    " Minumum lines to keep above and below cursor
 set nowrap         " Do not wrap long lines
-set autoindent     " Indent at the same level of the previous line
 set shiftwidth=4   " Use indents of 4 spaces
-set smarttab       " Smart tab
 set expandtab      " Tabs are spaces, not tabs
 set tabstop=4      " An indentation every four columns
 set softtabstop=4  " Let backspace delete indent
 set splitright     " Puts new vsplit windows to the right of the current
 set splitbelow     " Puts new split windows to the bottom of the current
-set autoread       " Automatically read a file changed outside of vim
 set autowrite      " Automatically write a file when leaving a modified buffer
-set mouse=a        " Automatically enable mouse usage
 set mousehide      " Hide the mouse cursor while typing
 set hidden         " Allow buffer switching without saving
 set t_Co=256       " Use 256 colors
 set ruler          " Show the ruler
 set showcmd        " Show partial commands in status line and Selected characters/lines in visual mode
-set showmode       " Display current mode
+set showmode       " Show current mode in command-line
 set showmatch      " Show matching brackets/parentthesis
 set matchtime=5    " Show matching time
-set laststatus=2   " Always show status line
-syntax on                      " Syntax highlighting
-filetype plugin indent on      " Automatically detect file types
-set linespace=0                " No extra spaces between rows
-set backspace=indent,eol,start " Backspace for dummies
+set report=0       " Always report changed lines
+set linespace=0    " No extra spaces between rows
 
 set winminheight=0
 set wildmode=list:longest,full
-set wildmenu
 
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 
-set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -62,7 +77,6 @@ set wildignore+=*swp,*.class,*.pyc,*.png,*.jpg,*.gif,*.zip
 set wildignore+=*/tmp/*,*.o,*.obj,*.so     " Unix
 set wildignore+=*\\tmp\\*,*.exe            " Windows
 
-set history=10000
 
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
@@ -71,6 +85,10 @@ vnoremap > >gv
 map j gj
 map k gk
 
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command! W w !sudo tee % > /dev/null
+ 
 if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
   finish
 endif
@@ -86,7 +104,6 @@ set foldmarker={,}
 set foldlevel=0
 set foldmethod=marker
 set foldcolumn=3
-set viminfo+=!
 
 highlight clear SignColumn
 highlight clear LineNr
@@ -144,6 +161,8 @@ endif
         nnoremap H ^
         " Move to the end of line
         nnoremap L $
+        " Redo
+        nnoremap U <C-r>
         " Yank to the end of line
         nnoremap Y y$
        " Auto indent pasted text
