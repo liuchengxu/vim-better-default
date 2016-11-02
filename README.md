@@ -2,8 +2,6 @@
 
 There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
 
-In the beginning, I wrote this for simplifying my `.vimrc` file. You can see [space-vim](https://github.com/liuchengxu/space-vim) for more information about the principle of my vim configurations. 
-
 ## [中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html)
 
 
@@ -15,7 +13,7 @@ In the beginning, I wrote this for simplifying my `.vimrc` file. You can see [sp
 
 If new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found.
 
-If you have been a vimer for quit a while, please see [default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim) directly. [vim-better-default](https://github.com/liuchengxu/vim-better-default) is intended for simplifying the tedious `.vimrc` file, so you may also use it to shorten your `.vimrc`.
+If you have been a vimer for quit a while, please see [default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim) directly. In the beginning [vim-better-default](https://github.com/liuchengxu/vim-better-default) is intended for simplifying the tedious `.vimrc` file, so you may also use it to shorten your `.vimrc`.
 
 ## Installation
 
