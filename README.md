@@ -29,7 +29,7 @@ This plugin can be installed with a varity of plugin managers, such as:
 ## Options
 
 Option                                  | Description                        | Default |
-:----:                                  | :----:                             | :----:
+:----                                  | :----                             | :----:
 `vim_better_default_minimum`            | Only add essential funationalities | 0
 `vim_better_default_key_mapping`        | Whole key (re)mappings             | 1
 `vim_better_default_basic_key_mapping`  | Basic key (re)mappings             | 1
