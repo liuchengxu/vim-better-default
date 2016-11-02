@@ -24,6 +24,7 @@ if !has('nvim')
   set autoindent                 " Indent at the same level of the previous line
   set autoread                   " Automatically read a file changed outside of vim
   set backspace=indent,eol,start " Backspace for dummies
+  set complete-=i                " Exclude files completion
   set display=lastline           " Show as much as possible of the last line
   set encoding=utf-8             " Set default encoding
   set history=10000              " Maximum history record
@@ -120,10 +121,13 @@ if has('clipboard')
     set clipboard=unnamed
 endif
 
-if has('persistent_undo')
-  set undofile             " Persistent undo
-  set undolevels=1000      " Maximum number of changes that can be undone
-  set undoreload=10000     " Maximum number lines to save for undo on a buffer reload
+if !exists('g:vim_better_default_persistent_undo') ||
+      \ g:vim_better_default_persistent_undo
+  if has('persistent_undo')
+    set undofile             " Persistent undo
+    set undolevels=1000      " Maximum number of changes that can be undone
+    set undoreload=10000     " Maximum number lines to save for undo on a buffer reload
+  endif
 endif
 
 if has('gui_running')

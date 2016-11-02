@@ -20,21 +20,24 @@ If you have been a vimer for quit a while, please see [default.vim](https://gith
 This plugin can be installed with a varity of plugin managers, such as:
 
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
-    - `Plugin 'liuchengxu/vim-better-default`
+    - Add `Plugin 'liuchengxu/vim-better-default` to .vimrc
+    - Run `:PluginInstall`
 - [Plug](https://github.com/junegunn/vim-plug)
-    - `Plug 'liuchengxu/vim-better-default`
+    - Add `Plug 'liuchengxu/vim-better-default` to .vimrc
+    - Run `:PlugInstall`
 
 ## Options
 
 Option                                  | Description                        | Default |
-:----                                  | :----                             | :----:
+:----                                   | :----                              | :----:
 `vim_better_default_minimum`            | Only add essential funationalities | 0
 `vim_better_default_key_mapping`        | Whole key (re)mappings             | 1
 `vim_better_default_basic_key_mapping`  | Basic key (re)mappings             | 1
 `vim_better_default_buffer_key_mapping` | Buffer key mappings                | 1
 `vim_better_default_file_key_mapping`   | File key mappings                  | 1
-`vim_better_default_fold_key_mapping`   | Fold key mappings                  | 1
+`im_better_default_fold_key_mapping`    | Fold key mappings                  | 1
 `vim_better_default_window_key_mapping` | Window key mappings                | 1
+`vim_better_default_persistent_undo`    | Persistent undo                    | 1
 `vim_better_default_backup_on`          | Set backup                         | 0
 
 
