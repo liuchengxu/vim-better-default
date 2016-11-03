@@ -41,7 +41,7 @@ if !has('nvim')
 
 endif
 
-set shortmess=atI  " No help Uganda information
+set shortmess=atOI  " No help Uganda information, and overwrite read messages to avoid "PRESS ENTER" prompts
 set ignorecase     " Case sensitive search
 set smartcase      " Case sensitive when uc present
 set scrolljump=5   " Line to scroll when cursor leaves screen
