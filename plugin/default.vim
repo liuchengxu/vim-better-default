@@ -108,11 +108,14 @@ set ffs=unix,dos,mac       " Use Unix as the standard file type
 set number                 " Line numbers on
 set relativenumber         " Relative numbers on
 set linebreak
+
+if !exists('g:vim_better_default_enable_folding') || g:vim_better_default_enable_folding
 set foldenable
 set foldmarker={,}
 set foldlevel=0
 set foldmethod=marker
 set foldcolumn=3
+endif
 
 highlight clear SignColumn
 highlight clear LineNr
