@@ -9,7 +9,7 @@ There are some general settings for convenience in almost everyone's `.vimrc` fi
 
 - **Out-of-the-box**: address a ton of deficiencies of the default vim configurations that nearly everyone can agree upon.
 
-- **Mnemonic key bindings**: commands have mnemonic prefixes like `<Leader> b` for all the buffer commands or `<Leader> w` for the window commands. `SPC` key is recommended as the leader key.
+- **Mnemonic key bindings**: commands have mnemonic prefixes like `<Leader> b` for the buffer commands or `<Leader> w` for the window commands. `SPC` key is recommended as the leader key.
 
 If new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found.
 
@@ -31,14 +31,15 @@ This plugin can be installed with a varity of plugin managers, such as:
 Option                                  | Description                        | Default |
 :----                                   | :----                              | :----:
 `vim_better_default_minimum`            | Only add essential funationalities | 0
+`vim_better_default_backup_on`          | Set backup                         | 0
+`vim_better_default_persistent_undo`    | Persistent undo                    | 1
+`vim_better_default_enable_folding`     | Enable fold                        | 1
 `vim_better_default_key_mapping`        | Whole key (re)mappings             | 1
 `vim_better_default_basic_key_mapping`  | Basic key (re)mappings             | 1
 `vim_better_default_buffer_key_mapping` | Buffer key mappings                | 1
 `vim_better_default_file_key_mapping`   | File key mappings                  | 1
-`im_better_default_fold_key_mapping`    | Fold key mappings                  | 1
+`vim_better_default_fold_key_mapping`   | Fold key mappings                  | 1
 `vim_better_default_window_key_mapping` | Window key mappings                | 1
-`vim_better_default_persistent_undo`    | Persistent undo                    | 1
-`vim_better_default_backup_on`          | Set backup                         | 0
 
 
 If you set the `vim_better_default_minumum` option, then vim seemingly looks like no difference with the default vim, it only adds some essential funtionalities.
@@ -59,7 +60,7 @@ You can also fork [vim-beter-default](https://github.com/liuchengxu/vim-better-d
 
 ## Contributions
 
-If you have any ideas or suggestions to improve [vim-better-default](https://github.com/liuchengxu/vim-better-default), please fork it and send a pull request. Your feedback is highly appreciated. 
+If you have any ideas or suggestions to improve [vim-better-default](https://github.com/liuchengxu/vim-better-default), please [open an issue](https://github.com/liuchengxu/vim-better-default/issues), or fork it and send a pull request. Your feedback is highly appreciated. 
 
 [vim-better-default](https://github.com/liuchengxu/vim-better-default) needs *you* !
 
