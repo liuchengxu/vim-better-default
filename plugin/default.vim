@@ -48,7 +48,9 @@ set scrolljump=5   " Line to scroll when cursor leaves screen
 set scrolloff=3    " Minumum lines to keep above and below cursor
 set nowrap         " Do not wrap long lines
 set shiftwidth=4   " Use indents of 4 spaces
+if !exists('g:vim_better_default_tabs_as_spaces') || g:vim_better_default_tabs_as_spaces
 set expandtab      " Tabs are spaces, not tabs
+end
 set tabstop=4      " An indentation every four columns
 set softtabstop=4  " Let backspace delete indent
 set splitright     " Puts new vsplit windows to the right of the current
