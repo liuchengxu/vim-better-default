@@ -41,7 +41,7 @@ if !has('nvim')
 
 endif
 
-set shortmess=atOI  " No help Uganda information, and overwrite read messages to avoid "PRESS ENTER" prompts
+set shortmess=atOI " No help Uganda information, and overwrite read messages to avoid PRESS ENTER prompts
 set ignorecase     " Case sensitive search
 set smartcase      " Case sensitive when uc present
 set scrolljump=5   " Line to scroll when cursor leaves screen
@@ -78,7 +78,6 @@ set wildignore+=*swp,*.class,*.pyc,*.png,*.jpg,*.gif,*.zip
 set wildignore+=*/tmp/*,*.o,*.obj,*.so     " Unix
 set wildignore+=*\\tmp\\*,*.exe            " Windows
 
-
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
@@ -89,6 +88,23 @@ map k gk
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
+
+" Change cursor shape for iTerm2 on macOS {
+  " bar in Insert mode
+  " inside iTerm2
+  if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  endif
+
+  " inside tmux
+  if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  endif
+" }
  
 if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
   finish
@@ -102,23 +118,23 @@ else
   set nowritebackup
 endif
 
-set background=dark        " Assume dark background
-set cursorline             " Highlight current line
-set ffs=unix,dos,mac       " Use Unix as the standard file type
-set number                 " Line numbers on
-set relativenumber         " Relative numbers on
-set linebreak
-
-if !exists('g:vim_better_default_enable_folding') || g:vim_better_default_enable_folding
-set foldenable
-set foldmarker={,}
-set foldlevel=0
-set foldmethod=marker
-set foldcolumn=3
+if !exists('g:vim_better_default_enable_folding') || 
+      \ g:vim_better_default_enable_folding
+  set foldenable
+  set foldmarker={,}
+  set foldlevel=0
+  set foldmethod=marker
+  set foldcolumn=3
 endif
 
-highlight clear SignColumn
-highlight clear LineNr
+set background=dark         " Assume dark background
+set cursorline              " Highlight current line
+set ffs=unix,dos,mac        " Use Unix as the standard file type
+set number                  " Line numbers on
+set relativenumber          " Relative numbers on
+
+highlight clear SignColumn  " SignColumn should match background
+highlight clear LineNr      " Current line number row will have same background color in relative mode
 
 if has('clipboard')
     set clipboard=unnamed
