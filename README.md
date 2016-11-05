@@ -58,6 +58,17 @@ For more details, please refer to the [default.vim](https://github.com/liuchengx
 
 You can also fork [vim-beter-default](https://github.com/liuchengxu/vim-better-default) and modify `plugin/default.vim` for more customization.
 
+## How to override the existing settings?
+
+`default.vim` normally loads after your `.vimrc`, making it a bit tricky to override. If you want to load it earlier, add the following content to your `.vimrc`, then follow on the settings you want to override.
+
+For instance, if you don't like relativenumber:
+
+```
+runtime! plugin/default.vim
+set norelativenumber
+```
+
 ## Contributions
 
 If you have any ideas or suggestions to improve [vim-better-default](https://github.com/liuchengxu/vim-better-default), please [open an issue](https://github.com/liuchengxu/vim-better-default/issues), or fork it and send a pull request. Your feedback is highly appreciated. 
