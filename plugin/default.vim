@@ -70,6 +70,8 @@ set wildmode=list:longest,full
 
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 
+set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
+
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -125,6 +127,7 @@ if !exists('g:vim_better_default_enable_folding') ||
   set foldlevel=0
   set foldmethod=marker
   set foldcolumn=3
+  set foldlevelstart=99
 endif
 
 set background=dark         " Assume dark background
@@ -134,10 +137,12 @@ set number                  " Line numbers on
 set relativenumber          " Relative numbers on
 
 highlight clear SignColumn  " SignColumn should match background
-highlight clear LineNr      " Current line number row will have same background color in relative mode
+" highlight clear LineNr      " Current line number row will have same background color in relative mode
 
-if has('clipboard')
-    set clipboard=unnamed
+if has('unnamedplus')
+  set clipboard=unnamedplus,unnamed
+else
+  set clipboard+=unnamed
 endif
 
 if !exists('g:vim_better_default_persistent_undo') ||
@@ -181,11 +186,13 @@ endif
         inoremap <C-k> <Up>
         inoremap <C-l> <Right>
         inoremap <C-d> <Delete>
+        " Command line shortcut
+        cnoremap <C-j> <Down>
+        cnoremap <C-k> <Up>
         " Quit insert mode
         inoremap jj <Esc>
         inoremap jk <Esc>
         inoremap kk <Esc>
-        inoremap ;; <Esc>
         " Quit visual mode
         vnoremap v <Esc>
         " Move to the start of line
