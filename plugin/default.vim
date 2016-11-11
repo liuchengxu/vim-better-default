@@ -1,6 +1,6 @@
 " default.vim - Better vim than the default
 " Maintainer:   Liu-Cheng Xu <https://github.com/liuchengxu>
-" Version:      0.1
+" Version:      0.2
 " vim: et ts=2 sts=2 sw=2
 
 scriptencoding utf-8
@@ -48,9 +48,6 @@ set scrolljump=5   " Line to scroll when cursor leaves screen
 set scrolloff=3    " Minumum lines to keep above and below cursor
 set nowrap         " Do not wrap long lines
 set shiftwidth=4   " Use indents of 4 spaces
-if !exists('g:vim_better_default_tabs_as_spaces') || g:vim_better_default_tabs_as_spaces
-set expandtab      " Tabs are spaces, not tabs
-end
 set tabstop=4      " An indentation every four columns
 set softtabstop=4  " Let backspace delete indent
 set splitright     " Puts new vsplit windows to the right of the current
@@ -66,6 +63,10 @@ set showmatch      " Show matching brackets/parentthesis
 set matchtime=5    " Show matching time
 set report=0       " Always report changed lines
 set linespace=0    " No extra spaces between rows
+
+if !exists('g:vim_better_default_tabs_as_spaces') || g:vim_better_default_tabs_as_spaces
+  set expandtab    " Tabs are spaces, not tabs
+end
 
 set winminheight=0
 set wildmode=list:longest,full
@@ -177,20 +178,28 @@ endif
       if !exists('g:vim_better_default_basic_key_mapping') ||
             \ g:vim_better_default_basic_key_mapping
         " Quit normal mode
-        nmap <Leader>q  :q<CR>
-        nmap <Leader>Q  :qa!<CR>
+        nnoremap <Leader>q  :q<CR>
+        nnoremap <Leader>Q  :qa!<CR>
         " Move half page faster
-        nmap <Leader>d  <C-d>
-        nmap <Leader>u  <C-u>
+        nnoremap <Leader>d  <C-d>
+        nnoremap <Leader>u  <C-u>
         " Insert mode shortcut
         inoremap <C-h> <Left>
         inoremap <C-j> <Down>
         inoremap <C-k> <Up>
         inoremap <C-l> <Right>
+        " Bash like
+        inoremap <C-a> <Home>
+        inoremap <C-e> <End>
         inoremap <C-d> <Delete>
-        " Command line shortcut
+        " Command mode shortcut
+        cnoremap <C-h> <left>
         cnoremap <C-j> <Down>
         cnoremap <C-k> <Up>
+        cnoremap <C-l> <Right>
+        cnoremap <C-a> <Home>
+        cnoremap <C-e> <End>
+        cnoremap <C-d> <Delete>
         " Quit insert mode
         inoremap jj <Esc>
         inoremap jk <Esc>
