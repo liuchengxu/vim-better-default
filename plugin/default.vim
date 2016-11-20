@@ -228,7 +228,6 @@ endif
     " Buffer {
       if !exists('g:vim_better_default_buffer_key_mapping') ||
             \ g:vim_better_default_buffer_key_mapping
-        nnoremap <Leader>bb :buffers<CR>
         nnoremap <Leader>bp :bprevious<CR>
         nnoremap <Leader>bn :bnext<CR>
         nnoremap <Leader>bf :bfirst<CR>

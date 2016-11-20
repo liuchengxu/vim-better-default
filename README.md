@@ -1,8 +1,8 @@
 # vim-better-default
 
-There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
+[:cn:中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html) | [键位绑定](https://github.com/liuchengxu/space-vim/blob/master/doc/tutorial_cn.md#vim-better-default)
 
-## [中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html) | [键位绑定](https://github.com/liuchengxu/space-vim/blob/master/doc/tutorial_cn.md#vim-better-default)
+There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
 
 
 ## Features
@@ -21,10 +21,10 @@ This plugin can be installed with a varity of plugin managers, such as:
 
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
     - Add `Plugin 'liuchengxu/vim-better-default` to .vimrc
-    - Run `:PluginInstall`
+    - Run `:source $MYVIMRC` and `:PluginInstall`
 - [Plug](https://github.com/junegunn/vim-plug)
     - Add `Plug 'liuchengxu/vim-better-default` to .vimrc
-    - Run `:PlugInstall`
+    - Run `:source $MYVIMRC` and `:PlugInstall`
 
 ## Options
 
@@ -75,7 +75,7 @@ If you have any ideas or suggestions to improve [vim-better-default](https://git
 
 [vim-better-default](https://github.com/liuchengxu/vim-better-default) needs *you* !
 
-## Inspired by
+## Inspiration
 
 - [spacemacs](https://github.com/syl20bnr/spacemacs)
 - [better-defaults](https://github.com/technomancy/better-defaults)
