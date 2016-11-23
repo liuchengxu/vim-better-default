@@ -71,6 +71,8 @@ end
 set winminheight=0
 set wildmode=list:longest,full
 
+" Beautify special characters
+set fillchars+=vert:┊
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 
 set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
@@ -129,7 +131,7 @@ if !exists('g:vim_better_default_enable_folding') ||
   set foldmarker={,}
   set foldlevel=0
   set foldmethod=marker
-  set foldcolumn=3
+  " set foldcolumn=3
   set foldlevelstart=99
 endif
 

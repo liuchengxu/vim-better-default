@@ -1,6 +1,7 @@
-# vim-better-default
+vim-better-default
+=========================
 
-[:cn:中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html) | [键位绑定](https://github.com/liuchengxu/space-vim/blob/master/doc/tutorial_cn.md#vim-better-default)
+:cn:[中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html) | [键位绑定](https://github.com/liuchengxu/space-vim#vim-better-default)
 
 There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
 
