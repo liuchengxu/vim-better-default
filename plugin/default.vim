@@ -71,8 +71,6 @@ end
 set winminheight=0
 set wildmode=list:longest,full
 
-" Beautify special characters
-set fillchars+=vert:┊
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 
 set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
