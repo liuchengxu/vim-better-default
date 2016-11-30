@@ -5,6 +5,8 @@ vim-better-default
 
 There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
 
+If you want a lightweight vim configuration without installing the plugin, I also maintain the content of vim-better-default on [gist](https://gist.github.com/liuchengxu/584e2fb96f3c896f836813e2f6f15caa), you can directly download it as a basic but still nice vim config.
+
 
 ## Features
 

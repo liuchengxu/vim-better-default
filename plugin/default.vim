@@ -1,6 +1,6 @@
 " default.vim - Better vim than the default
 " Maintainer:   Liu-Cheng Xu <https://github.com/liuchengxu>
-" Version:      0.2
+" Version:      1.0
 " vim: et ts=2 sts=2 sw=2
 
 scriptencoding utf-8
@@ -97,7 +97,7 @@ command! W w !sudo tee % > /dev/null
 " Change cursor shape for iTerm2 on macOS {
   " bar in Insert mode
   " inside iTerm2
-  if $TERM_PROGRAM =~ "iTerm"
+  if $TERM_PROGRAM =~# 'iTerm'
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
     let &t_SR = "\<Esc>]50;CursorShape=2\x7"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -135,9 +135,10 @@ endif
 
 set background=dark         " Assume dark background
 set cursorline              " Highlight current line
-set ffs=unix,dos,mac        " Use Unix as the standard file type
+set fileformats=unix,dos,mac        " Use Unix as the standard file type
 set number                  " Line numbers on
 set relativenumber          " Relative numbers on
+set fillchars=vert:\ ,stl:\ ,stlnc:\ 
 
 highlight clear SignColumn  " SignColumn should match background
 " highlight clear LineNr      " Current line number row will have same background color in relative mode
@@ -200,10 +201,11 @@ endif
         cnoremap <C-a> <Home>
         cnoremap <C-e> <End>
         cnoremap <C-d> <Delete>
-        " Quit insert mode
+        " jk | escaping
         inoremap jj <Esc>
         inoremap jk <Esc>
-        inoremap kk <Esc>
+        cnoremap jj <C-c>
+        cnoremap jk <C-c>
         " Quit visual mode
         vnoremap v <Esc>
         " Move to the start of line
@@ -212,6 +214,8 @@ endif
         nnoremap L $
         " Redo
         nnoremap U <C-r>
+        " Quick command mode
+        nnoremap ; :
         " Yank to the end of line
         nnoremap Y y$
        " Auto indent pasted text
