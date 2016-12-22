@@ -34,7 +34,7 @@ if !has('nvim')
   set mouse=a                    " Automatically enable mouse usage
   set smarttab                   " Smart tab
   set ttyfast                    " Faster redrawing
-  set viminfo+=!                 " Viminfo include ! 
+  set viminfo+=!                 " Viminfo include !
   set wildmenu                   " Show list instead of just completing
 
   set ttymouse=xterm2
@@ -110,7 +110,7 @@ command! W w !sudo tee % > /dev/null
     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
   endif
 " }
- 
+
 if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
   finish
 endif
@@ -123,7 +123,7 @@ else
   set nowritebackup
 endif
 
-if !exists('g:vim_better_default_enable_folding') || 
+if !exists('g:vim_better_default_enable_folding') ||
       \ g:vim_better_default_enable_folding
   set foldenable
   set foldmarker={,}
@@ -167,7 +167,7 @@ if has('gui_running')
   " No annoying sound on errors
   set noerrorbells
   set novisualbell
-  set t_vb=
+  set visualbell t_vb=
 endif
 
 " Key (re)Mappings {
@@ -254,7 +254,7 @@ endif
       if !exists('g:vim_better_default_file_key_mapping') ||
             \ g:vim_better_default_file_key_mapping
         " File save
-        nnoremap <Leader>fs :w<CR>
+        nnoremap <Leader>fs :update<CR>
       endif
     " }
 
@@ -285,6 +285,10 @@ endif
         nnoremap <Leader>wk <C-W>k
         nnoremap <Leader>wh <C-W>h
         nnoremap <Leader>wl <C-W>l
+        nnoremap <Leader>wH <C-W>5<
+        nnoremap <Leader>wL <C-W>5>
+        nnoremap <Leader>wJ :resize +5<CR>
+        nnoremap <Leader>wK :resize -5<CR>
         nnoremap <Leader>w= <C-W>=
         nnoremap <Leader>ws <C-W>s
         nnoremap <Leader>w- <C-W>s
