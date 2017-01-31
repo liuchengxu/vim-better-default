@@ -68,6 +68,9 @@ if !exists('g:vim_better_default_tabs_as_spaces') || g:vim_better_default_tabs_a
   set expandtab    " Tabs are spaces, not tabs
 end
 
+" http://stackoverflow.com/questions/6427650/vim-in-tmux-background-color-changes-when-paging/15095377#15095377
+set t_ut=
+
 set winminheight=0
 set wildmode=list:longest,full
 
