@@ -1,12 +1,7 @@
 vim-better-default
-=========================
-
-:cn:[中文简介](https://liuchengxu.github.io/2016/10/31/my-first-vim-plugin.html) | [键位绑定](https://github.com/liuchengxu/space-vim#vim-better-default)
+==================
 
 There are some general settings for convenience in almost everyone's `.vimrc` file. Let's shorten your `.vimrc` and make the default vim better.
-
-If you want a lightweight vim configuration without installing the plugin, I also maintain the content of vim-better-default on [gist](https://gist.github.com/liuchengxu/584e2fb96f3c896f836813e2f6f15caa), you can directly download it as a basic but still nice vim config.
-
 
 ## Features
 
@@ -16,7 +11,7 @@ If you want a lightweight vim configuration without installing the plugin, I als
 
 If new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found.
 
-If you have been a vimer for quit a while, please see [default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim) directly. In the beginning [vim-better-default](https://github.com/liuchengxu/vim-better-default) is intended for simplifying the tedious `.vimrc` file, so you may also use it to shorten your `.vimrc`.
+If you have been a vimmer for quit a while, please see [default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim) directly. In the beginning [vim-better-default](https://github.com/liuchengxu/vim-better-default) is intended for simplifying the tedious `.vimrc` file, so you may also use it to shorten your `.vimrc`.
 
 ## Installation
 
@@ -47,13 +42,13 @@ Option                                  | Description                        | D
 
 If you set the `vim_better_default_minumum` option, then vim seemingly looks like no difference with the default vim, it only adds some essential funtionalities.
 
-```
+```vim
 let g:vim_better_default_minimum = 1
 ```
 
 If you want to exclude key mappings in [vim-better-default](https://github.com/liuchengxu/vim-better-default), just set the value as 0.
 
-```
+```vim
 let g:vim_better_default_key_mapping = 0
 ```
 
@@ -67,16 +62,14 @@ You can also fork [vim-better-default](https://github.com/liuchengxu/vim-better-
 
 For instance, if you don't like relativenumber:
 
-```
+```vim
 runtime! plugin/default.vim
 set norelativenumber
 ```
 
 ## Contributions
 
-If you have any ideas or suggestions to improve [vim-better-default](https://github.com/liuchengxu/vim-better-default), please [open an issue](https://github.com/liuchengxu/vim-better-default/issues), or fork it and send a pull request. Your feedback is highly appreciated. 
-
-[vim-better-default](https://github.com/liuchengxu/vim-better-default) needs *you* !
+If you have any ideas or suggestions to improve [vim-better-default](https://github.com/liuchengxu/vim-better-default), please [open an issue](https://github.com/liuchengxu/vim-better-default/issues), or fork it and send a pull request. Your feedback is highly appreciated.
 
 ## Inspiration
 
