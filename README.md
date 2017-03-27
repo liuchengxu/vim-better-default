@@ -7,7 +7,7 @@ There are some general settings for convenience in almost everyone's `.vimrc` fi
 
 - **Out-of-the-box**: address a ton of deficiencies of the default vim configurations that nearly everyone can agree upon.
 
-- **Mnemonic key bindings**: commands have mnemonic prefixes like `<Leader> b` for the buffer commands or `<Leader> w` for the window commands. `SPC` key is recommended as the leader key.
+- **Mnemonic key bindings**: commands have mnemonic prefixes like `<Leader> b` for the buffer commands or `<Leader> w` for the window commands. `SPC` key is recommended as the leader key. You could also see the key bindings in [wiki](https://github.com/liuchengxu/vim-better-default/wiki/a-brief-introduction-to-key-bindings).
 
 If new to Vim, you can install [vim-better-default](https://github.com/liuchengxu/vim-better-default) as a starting point, rather than copying some random vimrc you found.
 
