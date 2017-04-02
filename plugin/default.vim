@@ -222,7 +222,7 @@ endif
         " Redo
         nnoremap U <C-r>
         " Quick command mode
-        nnoremap ; :
+        nnoremap <CR> :
         " Yank to the end of line
         nnoremap Y y$
        " Auto indent pasted text
