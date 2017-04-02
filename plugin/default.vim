@@ -114,6 +114,11 @@ command! W w !sudo tee % > /dev/null
     let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
   endif
+
+  " inside neovim
+  if has('nvim')
+    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
+  endif
 " }
 
 if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
