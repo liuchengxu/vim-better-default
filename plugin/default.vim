@@ -148,7 +148,7 @@ set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
 set number                  " Line numbers on
 set relativenumber          " Relative numbers on
-set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+set fillchars=vert:│,stl:\ ,stlnc:\ 
 
 highlight clear SignColumn  " SignColumn should match background
 " highlight clear LineNr      " Current line number row will have same background color in relative mode
