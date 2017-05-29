@@ -63,6 +63,7 @@ set showmatch      " Show matching brackets/parentthesis
 set matchtime=5    " Show matching time
 set report=0       " Always report changed lines
 set linespace=0    " No extra spaces between rows
+set pumheight=20   " Avoid the pop up menu occupying the whole screen
 
 if !exists('g:vim_better_default_tabs_as_spaces') || g:vim_better_default_tabs_as_spaces
   set expandtab    " Tabs are spaces, not tabs
@@ -149,6 +150,13 @@ set fileformats=unix,dos,mac        " Use Unix as the standard file type
 set number                  " Line numbers on
 set relativenumber          " Relative numbers on
 set fillchars=vert:│,stl:\ ,stlnc:\ 
+
+" Annoying temporary files
+set directory=/tmp//,.
+set backupdir=/tmp//,.
+if v:version >= 703
+  set undodir=/tmp//,.
+endif
 
 highlight clear SignColumn  " SignColumn should match background
 " highlight clear LineNr      " Current line number row will have same background color in relative mode
