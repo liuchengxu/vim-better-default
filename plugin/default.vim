@@ -167,8 +167,7 @@ else
   set clipboard+=unnamed
 endif
 
-if !exists('g:vim_better_default_persistent_undo') ||
-      \ g:vim_better_default_persistent_undo
+if exists('g:vim_better_default_persistent_undo') && g:vim_better_default_persistent_undo
   if has('persistent_undo')
     set undofile             " Persistent undo
     set undolevels=1000      " Maximum number of changes that can be undone

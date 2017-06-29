@@ -30,7 +30,7 @@ Option                                  | Description                        | D
 :----                                   | :----                              | :----:
 `vim_better_default_minimum`            | Only add essential funationalities | 0
 `vim_better_default_backup_on`          | Set backup                         | 0
-`vim_better_default_persistent_undo`    | Persistent undo                    | 1
+`vim_better_default_persistent_undo`    | Persistent undo                    | 0
 `vim_better_default_enable_folding`     | Enable fold                        | 1
 `vim_better_default_key_mapping`        | Whole key (re)mappings             | 1
 `vim_better_default_basic_key_mapping`  | Basic key (re)mappings             | 1
