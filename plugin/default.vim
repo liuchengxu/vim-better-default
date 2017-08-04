@@ -240,7 +240,11 @@ endif
        " Auto indent pasted text
         " nnoremap p p=`]<C-o>
         " Open shell in vim
-        map <Leader>' :shell<CR>
+        if has('nvim')
+          map <Leader>' :terminal<CR>
+        else
+          map <Leader>' :shell<CR>
+        endif
         " Search result highlight countermand
         nnoremap <Leader>sc :nohlsearch<CR>
         " Toggle pastemode
