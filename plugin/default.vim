@@ -235,12 +235,15 @@ endif
         nnoremap U <C-r>
         " Quick command mode
         nnoremap <CR> :
+        " In the quickfix window, <CR> is used to jump to the error under the
+        " cursor, so undefine the mapping there.
+        autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
         " Yank to the end of line
         nnoremap Y y$
-       " Auto indent pasted text
+        " Auto indent pasted text
         " nnoremap p p=`]<C-o>
         " Open shell in vim
-        if has('nvim')
+        if has('terminal')
           map <Leader>' :terminal<CR>
         else
           map <Leader>' :shell<CR>
