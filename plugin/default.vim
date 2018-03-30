@@ -243,7 +243,7 @@ endif
         " Auto indent pasted text
         " nnoremap p p=`]<C-o>
         " Open shell in vim
-        if has('terminal')
+        if has('nvim') || has('terminal')
           map <Leader>' :terminal<CR>
         else
           map <Leader>' :shell<CR>
