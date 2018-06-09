@@ -196,7 +196,7 @@ endif
       if !exists('g:vim_better_default_basic_key_mapping') ||
             \ g:vim_better_default_basic_key_mapping
         " Quit normal mode
-        nnoremap <Leader>q  :q<CR>
+        nnoremap <silent> <Leader>q  :q<CR>
         nnoremap <Leader>Q  :qa!<CR>
         " Move half page faster
         nnoremap <Leader>d  <C-d>
@@ -302,6 +302,10 @@ endif
         nnoremap <Leader>wk <C-W>k
         nnoremap <Leader>wh <C-W>h
         nnoremap <Leader>wl <C-W>l
+        tnoremap <Leader>wj <C-W>j
+        tnoremap <Leader>wk <C-W>k
+        tnoremap <Leader>wh <C-W>h
+        tnoremap <Leader>wl <C-W>l
         nnoremap <Leader>wH <C-W>5<
         nnoremap <Leader>wL <C-W>5>
         nnoremap <Leader>wJ :resize +5<CR>
