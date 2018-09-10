@@ -5,8 +5,7 @@
 
 scriptencoding utf-8
 
-if &compatible ||
-      \ (exists('g:loaded_vim_better_default') && g:loaded_vim_better_default)
+if &compatible || exists('g:loaded_vim_better_default')
    finish
 endif
 let g:loaded_vim_better_default = 1
@@ -122,11 +121,11 @@ command! W w !sudo tee % > /dev/null
   endif
 " }
 
-if exists('g:vim_better_default_minimum') && g:vim_better_default_minimum
+if get(g:, 'vim_better_default_minimum', 0)
   finish
 endif
 
-if exists('g:vim_better_default_backup_on') && g:vim_better_default_backup_on
+if get(g:, 'vim_better_default_backup_on', 0)
   set backup
 else
   set nobackup
@@ -134,8 +133,7 @@ else
   set nowritebackup
 endif
 
-if !exists('g:vim_better_default_enable_folding') ||
-      \ g:vim_better_default_enable_folding
+if get(g:, 'vim_better_default_enable_folding', 1)
   set foldenable
   set foldmarker={,}
   set foldlevel=0
@@ -167,7 +165,7 @@ else
   set clipboard+=unnamed
 endif
 
-if exists('g:vim_better_default_persistent_undo') && g:vim_better_default_persistent_undo
+if get(g:, 'vim_better_default_persistent_undo', 0)
   if has('persistent_undo')
     set undofile             " Persistent undo
     set undolevels=1000      " Maximum number of changes that can be undone
@@ -189,12 +187,10 @@ endif
 
 " Key (re)Mappings {
 
-  if !exists('g:vim_better_default_key_mapping') ||
-        \ g:vim_better_default_key_mapping
+  if get(g:, 'vim_better_default_key_mapping', 1)
 
     " Basic {
-      if !exists('g:vim_better_default_basic_key_mapping') ||
-            \ g:vim_better_default_basic_key_mapping
+      if get(g:, 'vim_better_default_basic_key_mapping', 1)
         " Quit normal mode
         nnoremap <silent> <Leader>q  :q<CR>
         nnoremap <Leader>Q  :qa!<CR>
@@ -254,8 +250,7 @@ endif
     " }
 
     " Buffer {
-      if !exists('g:vim_better_default_buffer_key_mapping') ||
-            \ g:vim_better_default_buffer_key_mapping
+      if get(g:, 'vim_better_default_buffer_key_mapping', 1)
         nnoremap <Leader>bp :bprevious<CR>
         nnoremap <Leader>bn :bnext<CR>
         nnoremap <Leader>bf :bfirst<CR>
@@ -266,16 +261,14 @@ endif
     " }
 
     " File {
-      if !exists('g:vim_better_default_file_key_mapping') ||
-            \ g:vim_better_default_file_key_mapping
+      if get(g:, 'vim_better_default_file_key_mapping', 1)
         " File save
         nnoremap <Leader>fs :update<CR>
       endif
     " }
 
     " Fold {
-      if !exists('g:vim_better_default_fold_key_mapping') ||
-            \ g:vim_better_default_fold_key_mapping
+      if get(g:, 'vim_better_default_fold_key_mapping', 1)
         nnoremap <Leader>f0 :set foldlevel=0<CR>
         nnoremap <Leader>f1 :set foldlevel=1<CR>
         nnoremap <Leader>f2 :set foldlevel=2<CR>
@@ -290,8 +283,7 @@ endif
     " }
 
     " Window {
-      if !exists('g:vim_better_default_window_key_mapping') ||
-            \ g:vim_better_default_window_key_mapping
+      if get(g:, 'vim_better_default_window_key_mapping', 1)
         nnoremap <Leader>ww <C-W>w
         nnoremap <Leader>wr <C-W>r
         nnoremap <Leader>wd <C-W>c
