@@ -292,10 +292,12 @@ endif
         nnoremap <Leader>wk <C-W>k
         nnoremap <Leader>wh <C-W>h
         nnoremap <Leader>wl <C-W>l
-        tnoremap <Leader>wj <C-W>j
-        tnoremap <Leader>wk <C-W>k
-        tnoremap <Leader>wh <C-W>h
-        tnoremap <Leader>wl <C-W>l
+        if has('nvim') || has('terminal')
+          tnoremap <Leader>wj <C-W>j
+          tnoremap <Leader>wk <C-W>k
+          tnoremap <Leader>wh <C-W>h
+          tnoremap <Leader>wl <C-W>l
+        endif
         nnoremap <Leader>wH <C-W>5<
         nnoremap <Leader>wL <C-W>5>
         nnoremap <Leader>wJ :resize +5<CR>
