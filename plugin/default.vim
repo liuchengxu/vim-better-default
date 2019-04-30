@@ -228,7 +228,7 @@ endif
         " Redo
         nnoremap U <C-r>
         " Quick command mode
-        " nnoremap <CR> :   ------------> I do not want this.
+        nnoremap <CR> : 
         " In the quickfix window, <CR> is used to jump to the error under the
         " cursor, so undefine the mapping there.
         autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>

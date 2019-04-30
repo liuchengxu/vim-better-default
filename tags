@@ -1,0 +1,91 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+$NVIM_TUI_ENABLE_CURSOR_SHAPE	plugin/default.vim	/^    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2$/;"	v
+<	plugin/default.vim	/^vnoremap < <gv$/;"	m
+<C-a>	plugin/default.vim	/^        cnoremap <C-a> <Home>$/;"	m
+<C-a>	plugin/default.vim	/^        inoremap <C-a> <Home>$/;"	m
+<C-b>	plugin/default.vim	/^        cnoremap <C-b> <Left>$/;"	m
+<C-b>	plugin/default.vim	/^        inoremap <C-b> <Left>$/;"	m
+<C-d>	plugin/default.vim	/^        cnoremap <C-d> <Delete>$/;"	m
+<C-d>	plugin/default.vim	/^        inoremap <C-d> <Delete>$/;"	m
+<C-e>	plugin/default.vim	/^        cnoremap <C-e> <End>$/;"	m
+<C-e>	plugin/default.vim	/^        inoremap <C-e> <End>$/;"	m
+<C-f>	plugin/default.vim	/^        cnoremap <C-f> <Right>$/;"	m
+<C-f>	plugin/default.vim	/^        inoremap <C-f> <Right>$/;"	m
+<C-h>	plugin/default.vim	/^        cnoremap <C-h> <BS>$/;"	m
+<C-h>	plugin/default.vim	/^        inoremap <C-h> <BS>$/;"	m
+<C-j>	plugin/default.vim	/^        cnoremap <C-j> <Down>$/;"	m
+<C-j>	plugin/default.vim	/^        inoremap <C-j> <Down>$/;"	m
+<C-k>	plugin/default.vim	/^        cnoremap <C-k> <Up>$/;"	m
+<C-k>	plugin/default.vim	/^        inoremap <C-k> <Up>$/;"	m
+<CR>	plugin/default.vim	/^        nnoremap <CR> : $/;"	m
+<Leader>'	plugin/default.vim	/^          map <Leader>' :shell<CR>$/;"	m
+<Leader>'	plugin/default.vim	/^          map <Leader>' :terminal<CR>$/;"	m
+<Leader>Q	plugin/default.vim	/^        nnoremap <Leader>Q  :qa!<CR>$/;"	m
+<Leader>bd	plugin/default.vim	/^        nnoremap <Leader>bd :bd<CR>$/;"	m
+<Leader>bf	plugin/default.vim	/^        nnoremap <Leader>bf :bfirst<CR>$/;"	m
+<Leader>bk	plugin/default.vim	/^        nnoremap <Leader>bk :bw<CR>$/;"	m
+<Leader>bl	plugin/default.vim	/^        nnoremap <Leader>bl :blast<CR>$/;"	m
+<Leader>bn	plugin/default.vim	/^        nnoremap <Leader>bn :bnext<CR>$/;"	m
+<Leader>bp	plugin/default.vim	/^        nnoremap <Leader>bp :bprevious<CR>$/;"	m
+<Leader>d	plugin/default.vim	/^        nnoremap <Leader>d  <C-d>$/;"	m
+<Leader>f0	plugin/default.vim	/^        nnoremap <Leader>f0 :set foldlevel=0<CR>$/;"	m
+<Leader>f1	plugin/default.vim	/^        nnoremap <Leader>f1 :set foldlevel=1<CR>$/;"	m
+<Leader>f2	plugin/default.vim	/^        nnoremap <Leader>f2 :set foldlevel=2<CR>$/;"	m
+<Leader>f3	plugin/default.vim	/^        nnoremap <Leader>f3 :set foldlevel=3<CR>$/;"	m
+<Leader>f4	plugin/default.vim	/^        nnoremap <Leader>f4 :set foldlevel=4<CR>$/;"	m
+<Leader>f5	plugin/default.vim	/^        nnoremap <Leader>f5 :set foldlevel=5<CR>$/;"	m
+<Leader>f6	plugin/default.vim	/^        nnoremap <Leader>f6 :set foldlevel=6<CR>$/;"	m
+<Leader>f7	plugin/default.vim	/^        nnoremap <Leader>f7 :set foldlevel=7<CR>$/;"	m
+<Leader>f8	plugin/default.vim	/^        nnoremap <Leader>f8 :set foldlevel=8<CR>$/;"	m
+<Leader>f9	plugin/default.vim	/^        nnoremap <Leader>f9 :set foldlevel=9<CR>$/;"	m
+<Leader>fs	plugin/default.vim	/^        nnoremap <Leader>fs :update<CR>$/;"	m
+<Leader>q	plugin/default.vim	/^        nnoremap <silent> <Leader>q  :q<CR>$/;"	m
+<Leader>sc	plugin/default.vim	/^        nnoremap <Leader>sc :nohlsearch<CR>$/;"	m
+<Leader>tp	plugin/default.vim	/^        nnoremap <Leader>tp :setlocal paste!<CR>$/;"	m
+<Leader>u	plugin/default.vim	/^        nnoremap <Leader>u  <C-u>$/;"	m
+<Leader>w-	plugin/default.vim	/^        nnoremap <Leader>w- <C-W>s$/;"	m
+<Leader>w2	plugin/default.vim	/^        nnoremap <Leader>w2 <C-W>v$/;"	m
+<Leader>w=	plugin/default.vim	/^        nnoremap <Leader>w= <C-W>=$/;"	m
+<Leader>wH	plugin/default.vim	/^        nnoremap <Leader>wH <C-W>5<$/;"	m
+<Leader>wJ	plugin/default.vim	/^        nnoremap <Leader>wJ :resize +5<CR>$/;"	m
+<Leader>wK	plugin/default.vim	/^        nnoremap <Leader>wK :resize -5<CR>$/;"	m
+<Leader>wL	plugin/default.vim	/^        nnoremap <Leader>wL <C-W>5>$/;"	m
+<Leader>w\\|	plugin/default.vim	/^        nnoremap <Leader>w\\| <C-W>v$/;"	m
+<Leader>wd	plugin/default.vim	/^        nnoremap <Leader>wd <C-W>c$/;"	m
+<Leader>wh	plugin/default.vim	/^        nnoremap <Leader>wh <C-W>h$/;"	m
+<Leader>wj	plugin/default.vim	/^        nnoremap <Leader>wj <C-W>j$/;"	m
+<Leader>wk	plugin/default.vim	/^        nnoremap <Leader>wk <C-W>k$/;"	m
+<Leader>wl	plugin/default.vim	/^        nnoremap <Leader>wl <C-W>l$/;"	m
+<Leader>wq	plugin/default.vim	/^        nnoremap <Leader>wq <C-W>q$/;"	m
+<Leader>wr	plugin/default.vim	/^        nnoremap <Leader>wr <C-W>r$/;"	m
+<Leader>ws	plugin/default.vim	/^        nnoremap <Leader>ws <C-W>s$/;"	m
+<Leader>wv	plugin/default.vim	/^        nnoremap <Leader>wv <C-W>v$/;"	m
+<Leader>ww	plugin/default.vim	/^        nnoremap <Leader>ww <C-W>w$/;"	m
+>	plugin/default.vim	/^vnoremap > >gv$/;"	m
+Contributions	README.md	/^## Contributions$/;"	s
+Features	README.md	/^## Features$/;"	s
+H	plugin/default.vim	/^        nnoremap H ^$/;"	m
+How to override the existing settings?	README.md	/^## How to override the existing settings?$/;"	s
+Inspiration	README.md	/^## Inspiration$/;"	s
+Installation	README.md	/^## Installation$/;"	s
+L	plugin/default.vim	/^        nnoremap L \$$/;"	m
+Options	README.md	/^## Options$/;"	s
+U	plugin/default.vim	/^        nnoremap U <C-r>$/;"	m
+W	plugin/default.vim	/^command! W w !sudo tee % > \/dev\/null$/;"	c
+Y	plugin/default.vim	/^        nnoremap Y y\$$/;"	m
+g:loaded_vim_better_default	plugin/default.vim	/^let g:loaded_vim_better_default = 1$/;"	v
+j	plugin/default.vim	/^nmap j gj$/;"	m
+j	plugin/default.vim	/^vmap j gj$/;"	m
+jk	plugin/default.vim	/^        cnoremap jk <C-c>$/;"	m
+jk	plugin/default.vim	/^        inoremap jk <Esc>$/;"	m
+k	plugin/default.vim	/^nmap k gk$/;"	m
+k	plugin/default.vim	/^vmap k gk$/;"	m
+s:save_cpo	plugin/default.vim	/^let s:save_cpo = &cpo$/;"	v
+v	plugin/default.vim	/^        vnoremap v <Esc>$/;"	m
+vim-better-default	README.md	/^vim-better-default$/;"	c
