@@ -243,7 +243,7 @@ endif
           map <Leader>' :shell<CR>
         endif
         " Search result highlight countermand
-        nnoremap <silent> <Leader>sc :nohlsearch<CR>  " Added silent so that there is no residue
+        nnoremap <silent> <Leader>sc :let @/ = ''<CR> " Added silent so that there is no residue
         " Toggle pastemode
         nnoremap <Leader>tp :setlocal paste!<CR>
       endif
