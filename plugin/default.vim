@@ -147,7 +147,7 @@ set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
 set number                  " Line numbers on
 set relativenumber          " Relative numbers on
-set fillchars=vert:│,stl:\ ,stlnc:\ 
+set fillchars=stl:\ ,stlnc:\ ,fold:\ ,vert:│
 
 " Annoying temporary files
 set directory=/tmp//,.
