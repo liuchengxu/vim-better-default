@@ -191,9 +191,11 @@ endif
 
     " Basic {
       if get(g:, 'vim_better_default_basic_key_mapping', 1)
+        " Add <slient> for the rhs is Ex-cmd as some GUI app, e.g., gnvim,
+        " flashes when you use these mappings.
         " Quit normal mode
         nnoremap <silent> <Leader>q  :q<CR>
-        nnoremap <Leader>Q  :qa!<CR>
+        nnoremap <silent> <Leader>Q  :qa!<CR>
         " Move half page faster
         nnoremap <Leader>d  <C-d>
         nnoremap <Leader>u  <C-u>
@@ -238,47 +240,47 @@ endif
         " nnoremap p p=`]<C-o>
         " Open shell in vim
         if has('nvim') || has('terminal')
-          map <Leader>' :terminal<CR>
+          map <silent> <Leader>' :terminal<CR>
         else
-          map <Leader>' :shell<CR>
+          map <silent> <Leader>' :shell<CR>
         endif
         " Search result highlight countermand
-        nnoremap <Leader>sc :nohlsearch<CR>
+        nnoremap <silent> <Leader>sc :nohlsearch<CR>
         " Toggle pastemode
-        nnoremap <Leader>tp :setlocal paste!<CR>
+        nnoremap <silent> <Leader>tp :setlocal paste!<CR>
       endif
     " }
 
     " Buffer {
       if get(g:, 'vim_better_default_buffer_key_mapping', 1)
-        nnoremap <Leader>bp :bprevious<CR>
-        nnoremap <Leader>bn :bnext<CR>
-        nnoremap <Leader>bf :bfirst<CR>
-        nnoremap <Leader>bl :blast<CR>
-        nnoremap <Leader>bd :bd<CR>
-        nnoremap <Leader>bk :bw<CR>
+        nnoremap <silent> <Leader>bp :bprevious<CR>
+        nnoremap <silent> <Leader>bn :bnext<CR>
+        nnoremap <silent> <Leader>bf :bfirst<CR>
+        nnoremap <silent> <Leader>bl :blast<CR>
+        nnoremap <silent> <Leader>bd :bd<CR>
+        nnoremap <silent> <Leader>bk :bw<CR>
       endif
     " }
 
     " File {
       if get(g:, 'vim_better_default_file_key_mapping', 1)
         " File save
-        nnoremap <Leader>fs :update<CR>
+        nnoremap <silent> <Leader>fs :update<CR>
       endif
     " }
 
     " Fold {
       if get(g:, 'vim_better_default_fold_key_mapping', 1)
-        nnoremap <Leader>f0 :set foldlevel=0<CR>
-        nnoremap <Leader>f1 :set foldlevel=1<CR>
-        nnoremap <Leader>f2 :set foldlevel=2<CR>
-        nnoremap <Leader>f3 :set foldlevel=3<CR>
-        nnoremap <Leader>f4 :set foldlevel=4<CR>
-        nnoremap <Leader>f5 :set foldlevel=5<CR>
-        nnoremap <Leader>f6 :set foldlevel=6<CR>
-        nnoremap <Leader>f7 :set foldlevel=7<CR>
-        nnoremap <Leader>f8 :set foldlevel=8<CR>
-        nnoremap <Leader>f9 :set foldlevel=9<CR>
+        nnoremap <silent> <Leader>f0 :set foldlevel=0<CR>
+        nnoremap <silent> <Leader>f1 :set foldlevel=1<CR>
+        nnoremap <silent> <Leader>f2 :set foldlevel=2<CR>
+        nnoremap <silent> <Leader>f3 :set foldlevel=3<CR>
+        nnoremap <silent> <Leader>f4 :set foldlevel=4<CR>
+        nnoremap <silent> <Leader>f5 :set foldlevel=5<CR>
+        nnoremap <silent> <Leader>f6 :set foldlevel=6<CR>
+        nnoremap <silent> <Leader>f7 :set foldlevel=7<CR>
+        nnoremap <silent> <Leader>f8 :set foldlevel=8<CR>
+        nnoremap <silent> <Leader>f9 :set foldlevel=9<CR>
       endif
     " }
 
