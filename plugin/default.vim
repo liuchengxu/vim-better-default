@@ -147,7 +147,7 @@ set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
 set number                  " Line numbers on
 set relativenumber          " Relative numbers on
-set fillchars=vert:│,stl:\ ,stlnc:\ 
+set fillchars=stl:\ ,stlnc:\ ,fold:\ ,vert:| 
 
 " Annoying temporary files
 set directory=/tmp//,.
@@ -193,7 +193,7 @@ endif
       if get(g:, 'vim_better_default_basic_key_mapping', 1)
         " Quit normal mode
         nnoremap <silent> <Leader>q  :q<CR>
-        nnoremap <Leader>Q  :qa!<CR>
+        nnoremap <silent> <Leader>Q  :qa!<CR>
         " Move half page faster
         nnoremap <Leader>d  <C-d>
         nnoremap <Leader>u  <C-u>
@@ -238,32 +238,32 @@ endif
         " nnoremap p p=`]<C-o>
         " Open shell in vim
         if has('nvim') || has('terminal')
-          map <Leader>' :terminal<CR>
+          map <silent> <Leader>' :terminal<CR>
         else
-          map <Leader>' :shell<CR>
+          map <silent> <Leader>' :shell<CR>
         endif
         " Search result highlight countermand
         nnoremap <silent> <Leader>sc :let @/ = ''<CR> " Added silent so that there is no residue
         " Toggle pastemode
-        nnoremap <Leader>tp :setlocal paste!<CR>
+        nnoremap <silent> <Leader>tp :setlocal paste!<CR>
       endif
     " }
 
     " Buffer {
       if get(g:, 'vim_better_default_buffer_key_mapping', 1)
-        nnoremap <Leader>bp :bprevious<CR>
-        nnoremap <Leader>bn :bnext<CR>
-        nnoremap <Leader>bf :bfirst<CR>
-        nnoremap <Leader>bl :blast<CR>
-        nnoremap <Leader>bd :bd<CR>
-        nnoremap <Leader>bk :bw<CR>
+        nnoremap <silent> <Leader>bp :bprevious<CR>
+        nnoremap <silent> <Leader>bn :bnext<CR>
+        nnoremap <silent> <Leader>bf :bfirst<CR>
+        nnoremap <silent> <Leader>bl :blast<CR>
+        nnoremap <silent> <Leader>bd :bd<CR>
+        nnoremap <silent> <Leader>bk :bw<CR>
       endif
     " }
 
     " File {
       if get(g:, 'vim_better_default_file_key_mapping', 1)
         " File save
-        nnoremap <Leader>fs :update<CR>
+        nnoremap <silent> <Leader>fs :update<CR>
       endif
     " }
 
