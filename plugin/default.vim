@@ -191,6 +191,8 @@ endif
 
     " Basic {
       if get(g:, 'vim_better_default_basic_key_mapping', 1)
+        " Add <slient> for the rhs is Ex-cmd as some GUI app, e.g., gnvim,
+        " flashes when you use these mappings.
         " Quit normal mode
         nnoremap <silent> <Leader>q  :q<CR>
         nnoremap <silent> <Leader>Q  :qa!<CR>
@@ -269,16 +271,16 @@ endif
 
     " Fold {
       if get(g:, 'vim_better_default_fold_key_mapping', 1)
-        nnoremap <Leader>f0 :set foldlevel=0<CR>
-        nnoremap <Leader>f1 :set foldlevel=1<CR>
-        nnoremap <Leader>f2 :set foldlevel=2<CR>
-        nnoremap <Leader>f3 :set foldlevel=3<CR>
-        nnoremap <Leader>f4 :set foldlevel=4<CR>
-        nnoremap <Leader>f5 :set foldlevel=5<CR>
-        nnoremap <Leader>f6 :set foldlevel=6<CR>
-        nnoremap <Leader>f7 :set foldlevel=7<CR>
-        nnoremap <Leader>f8 :set foldlevel=8<CR>
-        nnoremap <Leader>f9 :set foldlevel=9<CR>
+        nnoremap <silent> <Leader>f0 :set foldlevel=0<CR>
+        nnoremap <silent> <Leader>f1 :set foldlevel=1<CR>
+        nnoremap <silent> <Leader>f2 :set foldlevel=2<CR>
+        nnoremap <silent> <Leader>f3 :set foldlevel=3<CR>
+        nnoremap <silent> <Leader>f4 :set foldlevel=4<CR>
+        nnoremap <silent> <Leader>f5 :set foldlevel=5<CR>
+        nnoremap <silent> <Leader>f6 :set foldlevel=6<CR>
+        nnoremap <silent> <Leader>f7 :set foldlevel=7<CR>
+        nnoremap <silent> <Leader>f8 :set foldlevel=8<CR>
+        nnoremap <silent> <Leader>f9 :set foldlevel=9<CR>
       endif
     " }
 
