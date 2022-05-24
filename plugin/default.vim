@@ -80,7 +80,7 @@ set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundari
 
 set termencoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set fileencodings=ucs-bom,utf-8,default,gb18030,gbk,gb2312,cp936,latin1
 
 set wildignore+=*swp,*.class,*.pyc,*.png,*.jpg,*.gif,*.zip
 set wildignore+=*/tmp/*,*.o,*.obj,*.so     " Unix
