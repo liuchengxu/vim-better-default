@@ -78,7 +78,9 @@ set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 
 set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
 
-set termencoding=utf-8
+if has('+termencoding')
+  set termencoding=utf-8
+endif
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,default,gb18030,gbk,gb2312,cp936,latin1
 
